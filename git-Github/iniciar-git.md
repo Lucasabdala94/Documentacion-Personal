@@ -26,8 +26,7 @@
 ```
 devuelve todos los repositorio agregados.
 
-```markdown
+
 C:\Users\Usuario\Desktop\teoria programacion>git remote -v
 origin  https://github.com/Lucasabdala94/Documentacion-Personal.git (fetch)
 origin  https://github.com/Lucasabdala94/Documentacion-Personal.git (push)    
-```
