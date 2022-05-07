@@ -18,6 +18,10 @@ El simbolo de admiracion indica que es una imagen. Entre [ ] se escribo el nmobr
 
 ## Imagen Local
 
+```markdown
+  ![Escudo en Local](img/images.jpg "Logo en local")
+```
+
 ![Escudo en Local](img/images.jpg "Logo en local")
 
 La ruta es reñativa.
