@@ -37,4 +37,4 @@
 
 ## Seleccion por palabra
 
-        ctrol + alt
+        ctrol + shift
