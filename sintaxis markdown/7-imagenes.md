@@ -24,7 +24,7 @@ El simbolo de admiracion indica que es una imagen. Entre [ ] se escribo el nmobr
 
 ![Escudo en Local](img/images.jpg "Logo en local")
 
-La ruta es reñativa.
+La ruta es relativa.
 
 ## Dar formato con HTML Y CCS
 

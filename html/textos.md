@@ -29,7 +29,7 @@ Solo use uno < h1 > por página; esto debería representar el encabezado/tema pr
 ```
 
 
-## Marcar texto
+## Remarcar texto
 
 resaltar texto.
 ```html
@@ -49,5 +49,16 @@ seleccionar texto y presionar ctrol + shift + k
 **Descomentar**
 
 seleccionar texto y presionar ctrol + shift + u
+
+## Salto de lineas
+
+```html
+    <p>Había una vez un hombre llamado O'Dell<br>
+    A quién le encantaba escribir HTML<br>
+    Pero su estructura era mala, su semántica era triste<br>
+    y su marcado no se interpretó muy bien.</p>
+```
+
+si no insertamos < br > por mas que presionesmos enter al dinal del reglon se mostrara todo junto.
 
 
