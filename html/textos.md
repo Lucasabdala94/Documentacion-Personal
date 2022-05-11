@@ -59,6 +59,6 @@ seleccionar texto y presionar ctrol + shift + u
     y su marcado no se interpretó muy bien.</p>
 ```
 
-si no insertamos < br > por mas que presionesmos enter al dinal del reglon se mostrara todo junto.
+si no insertamos < br > por mas que presionemos enter al final del reglon se mostrara todo junto.
 
 
