@@ -118,6 +118,9 @@ Con este código, en ventanas de 800px o mayores la imagen se muestra ocupando e
 Es un contenedor usado para especificar múltiples elementos < source > y un elemento < img > contenido en él para proveer versiones de una imagen para diferentes escenarios de dispositivos. Si no hay coincidencias con los elementos < source >, el archivo especificado en los atributos src del elemento < img > es utilizado. La imagen seleccionada es entonces presentada en el espacio ocupado por el elemento < img >.
 Para seleccionar la imagen óptima, el user agent (en-US) examina cada atributo srcset, media, y type de la fuente para seleccionar la imagen compatible.
 
+## Etiqueta < source >
+
+El elemento source contiene los grupos de imágenes entre los que se elegirá la que mostrar. Un mismo picture puede contener tantos elementos source como se necesiten.
 
 ### Seleccion de imagen por tamaño de ventana
     
