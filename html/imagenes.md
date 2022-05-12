@@ -113,7 +113,13 @@ Los valores admitidos como válidos son cualquiera de los usados en tamaños (px
 ```
 Con este código, en ventanas de 800px o mayores la imagen se muestra ocupando el 60% de la anchura de la ventana y en menores el 100%.Y en base a ello el navegador mostrará una de las imágenes indicadas en el srcset en función del tamaño de la ventana y de la densidad de píxeles de la pantalla.
 
-También se puede indicar archivo de imagen por tamaño de ventana de la siguiente forma con el elemento source y el atributo media:
+## Etiqueta < picture >
+
+Es un contenedor usado para especificar múltiples elementos < source > y un elemento < img > contenido en él para proveer versiones de una imagen para diferentes escenarios de dispositivos. Si no hay coincidencias con los elementos < source >, el archivo especificado en los atributos src del elemento < img > es utilizado. La imagen seleccionada es entonces presentada en el espacio ocupado por el elemento < img >.
+Para seleccionar la imagen óptima, el user agent (en-US) examina cada atributo srcset, media, y type de la fuente para seleccionar la imagen compatible.
+
+
+### Seleccion de imagen por tamaño de ventana
     
 ```html
 <picture>
@@ -124,7 +130,7 @@ También se puede indicar archivo de imagen por tamaño de ventana de la siguien
 ```
 
 
-##### Seleccion de la imagen por formato de archivo
+### Seleccion de la imagen por formato de archivo
 
 ```html
 <picture>
@@ -137,7 +143,7 @@ segun si los navegadores soportan o no iran comprobando en orden desendente.
 El atributo type permite especificar un tipo MIME para los recursos
 
 
-#### Seleccion por criterios Artisticos
+### Seleccion por criterios Artisticos
 
 ebido a la disparidad que hay en la relación de aspectos de pantallas, hay imágenes que por su composición artístisca perderían la información relevante si sólo se escalasen en su tamaño para ajustarse al tamaño de las pantallas o su densidad de px.
 utlizando criterios artísticos en vez de basarnos en el tamaño del viewport el resultado será mucho más satisfactorio:
@@ -160,11 +166,7 @@ PAGINA DONDE SE SACO LA INFO FINAL
 
 [blogspot](https://escss.blogspot.com/2014/10/responsive-images-picture-srcset.html)
 
-## Etiqueta < picture >
 
-es un contenedor usado para especificar múltiples elementos < source > y un elemento < img > contenido en él para proveer versiones de una imagen para diferentes escenarios de dispositivos. Si no hay coincidencias con los elementos < source >, el archivo especificado en los atributos src del elemento < img > es utilizado. La imagen seleccionada es entonces presentada en el espacio ocupado por el elemento < img >.
-Para seleccionar la imagen óptima, el user agent (en-US) examina cada atributo srcset, media, y type de la fuente para seleccionar la imagen compatible.
-
-PARA UN AJUSTE MAS FINO...
+PARA UN AJUSTE MAS FINO...(CSS)
 
 Se puede usar la propiedad object-position para ajustar la posición de la imagen dentro del marco del elemento, y la propiedad object-fit para controlar como el tamaño de la imagen se ajusta para adaptarse al marco.
