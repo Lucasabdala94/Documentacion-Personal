@@ -42,11 +42,11 @@ resaltar texto.
     <!--Esto es un comentario-->
 ```
 
-**Comentar**
+### **Comentar**
 
 seleccionar texto y presionar ctrol + shift + k
 
-**Descomentar**
+### **Descomentar**
 
 seleccionar texto y presionar ctrol + shift + u
 

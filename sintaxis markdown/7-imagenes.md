@@ -26,18 +26,16 @@ El simbolo de admiracion indica que es una imagen. Entre [ ] se escribo el nmobr
 
 La ruta es relativa.
 
-## Dar formato con HTML Y CCS
+## Dar tamaño soportado por GITHUB
+
+    <img align="center" src="enlace" alt="drawing" width="200"/>
+
+
+
+
+## Dar formato con HTML Y CCS ( no soportado por GITHUB)
 
 <div style = 'text-align:center;'>
         <img src="https://pbs.twimg.com/media/EiAAHfoU4AADis4?format=jpg&name=small" alt="JuveYell" width="300px">
 </div>
 
-## Agregar Video
-
-Recordar sacar enlace de compartir de youtube.
-
-
-
-<iframe name="marco" width="100%" height="450"
-  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/38289724&visual=true">
-</iframe>
