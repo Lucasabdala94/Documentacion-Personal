@@ -86,8 +86,6 @@ function generadores(){
     }
 
 }
-
-
 ```
 
 Para ver la base de datos creada y sus procedimientos...
