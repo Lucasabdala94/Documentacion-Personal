@@ -1,7 +1,5 @@
 # UTILIDADES
 
----
-
 ## Acceso a toda la funcionalidad a través del teclado.
 
         ctrol + shift + p
@@ -14,7 +12,6 @@
 
         ctrol + Mayús + f
 
-
 ## Seleccion de ocurrencias en el documento
 
         ctrol + Shift + L
@@ -26,7 +23,7 @@
 ## Mover lineas
 
         Alt + Up/Down
-        
+
 ## Cursor Multiple
 
         alt + click
@@ -38,3 +35,7 @@
 ## Seleccion por palabra
 
         ctrol + shift
+
+## Cerrar barra lateral
+
+control + b

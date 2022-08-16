@@ -7,6 +7,7 @@ si no se aplica esto solo la primera pagina tiene esto por defecto.
 ```js
 import Head from 'next/head'
 ```
+
 Luego la implementamos en el componente.
 
 ```js
@@ -24,4 +25,5 @@ export default function Game (){
     )
 }
 ```
+
 El ejemplo es aplicada en un path dinamico haciendo cambiar el titulo de la pagina segun lo que se busque. Se puede agregar una descripcion y todos los metas necesarios.

@@ -1,12 +1,12 @@
 # Iniciar repositorio git
 
-* Abrir terminal en la ubicacion.
-* Copir sigiente codigo
+- Abrir terminal en la ubicacion.
+- Copiar sigiente codigo
 
 ```Bash
     git init
     git commit -m "first commit"
-    git branch -M main 
+    git branch -M main
     git remote add origin https://github.com/Lucasabdala94/Documentacion-Personal.git
     git push -u origin main
 ```
@@ -24,8 +24,9 @@
 ```Bash
     git remote -v
 ```
+
 devuelve todos los repositorio agregados.
 
-origin  https://github.com/Lucasabdala94/Documentacion-Personal.git (fetch)
+origin https://github.com/Lucasabdala94/Documentacion-Personal.git (fetch)
 
-origin  https://github.com/Lucasabdala94/Documentacion-Personal.git (push)    
+origin https://github.com/Lucasabdala94/Documentacion-Personal.git (push)
