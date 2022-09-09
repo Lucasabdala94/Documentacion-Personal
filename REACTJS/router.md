@@ -11,6 +11,7 @@ npm install react-router-dom@6
 ## Estructura de carpetas y configuracion para que tener router react en toda la aplicacion incluido app.js.
 
 - src
+  - components
   - pages
     - Aboutpages.js
     - ContatoPages.js
