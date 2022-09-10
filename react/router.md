@@ -161,6 +161,7 @@ export default function TiposTacos() {
 # Rutas anidadas (React Router).
 
 ej. ruta dinamica anidada con ruta details que mostrar un componente TacoDetalles.
+lo siguiente se encuentra en routers....
 
 ```javascript
 <Route path="/tacos/:tipo" element={<TiposTacos />}>
@@ -182,6 +183,25 @@ export default function TiposTacos() {
       <hr />
       <Link to="details">Ir a los detalles</Link>
       <Outlet />
+    </div>
+  );
+}
+```
+
+Para que el componente que se manda por la ruta anidada sea visible see debe colocar el <Outlet>.
+Nótese que dentro del componente ruta tambien tenemos el parametro de la ruta padre.
+
+```javascript
+import React from 'react';
+import { useParams, Link } from 'react-router-dom';
+export default function TacoDetalles() {
+  const { tipo } = useParams();
+  return (
+    <div className="container">
+      <h1>Detalles</h1>
+      <p>Nombre : {tipo} </p>
+      <p>Compojnentes: </p>
+      <Link to="./../">Cerrar</Link>
     </div>
   );
 }
