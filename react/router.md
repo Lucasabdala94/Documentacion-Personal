@@ -169,6 +169,8 @@ lo siguiente se encuentra en routers....
 </Route>
 ```
 
+El path de la ruta anidada quedara pagina/tacos/tipo/details
+Se debe usar una ruta relativa en la ruta anidada.
 Implementacion en el componente TiposTacos...
 
 ```javascript
