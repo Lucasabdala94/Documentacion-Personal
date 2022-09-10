@@ -134,7 +134,7 @@ export default function Tacos() {
 }
 ```
 
-## useParams (Hooks para extraer datos de la url);
+# useParams (Hooks para extraer datos de la url);
 
 Ej extraemos de la ruta dinamica
 
@@ -156,4 +156,14 @@ export default function TiposTacos() {
     </div>
   );
 }
+```
+
+# Rutas anidadas (React Router).
+
+ej. ruta dinamica anidada con ruta details.
+
+```javascript
+<Route path="/tacos/:tipo" element={<TiposTacos />}>
+  <Route path="details" element={<TacoDetalles />} />
+</Route>
 ```
