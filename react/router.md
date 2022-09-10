@@ -188,7 +188,7 @@ export default function TiposTacos() {
 }
 ```
 
-Para que el componente que se manda por la ruta anidada sea visible see debe colocar el <Outlet>.
+Para que el componente que se manda por la ruta anidada sea visible see debe colocar el Outlet.
 Nótese que dentro del componente ruta tambien tenemos el parametro de la ruta padre.
 
 ```javascript
