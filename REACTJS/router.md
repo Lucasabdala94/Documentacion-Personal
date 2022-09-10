@@ -8,60 +8,152 @@ instalamos el npm
 npm install react-router-dom@6
 ```
 
-## Estructura de carpetas y configuracion para que tener router react en toda la aplicacion incluido app.js.
+## Estructura de carpetas y configuracion para tener router react en toda la aplicacion incluido app.js.
 
 - src
   - components
   - pages
-    - Aboutpages.js
-    - ContatoPages.js
-    - HomePages.js
-    - Error404Pages.js
+    - Contato.js
+    - Home.js
+    - Error404.js
+    - Tacos.js
   - routers
     - AppRouter.js
   - index.js
   - App.js
 
 En pages se almacenaran todas los componentes paginas.
-En routers se almacena un unico archivo con las importacioens de los componentes que se mostrara al cargar las rutas y las rutas existentes.
-ej de AppRouter:
+
+## Para tener react Router en toda la App...
 
 ```javascript
 import React from 'react';
-import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
-import AboutPages from '../pages/AboutPages';
-import ContactoPages from '../pages/ContactoPages';
-import HomePages from '../pages/HomePages';
-import App from '../App';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 
-export default function AppRouter() {
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
+
+root.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
+```
+
+En app importamos el routers...
+
+```javascript
+import React from 'react';
+import './style.css';
+import RouterApp from './routers/RouterApp';
+
+export default function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path='/about' element={ <AboutPages />}  />
-        <Route path='/contacto' element={<ContactoPages />}  />
-        <Route path='/' element={<App />}  />
-        <Route path='*' element={<Error404Pages />}  />
-      </Routes>
-    </Router>
-  )
+    <div>
+      <header>
+        <h1>Estamos en app</h1>
+      </header>
+      <RouterApp />
+    </div>
+  );
 }
 ```
 
-actualmente no hace falta enviar el parametro exact al Route.
-
-El index.js :
+En routers se almacenan todos los componentes que generan las rutas.
+ej de AppRouter donde tenemos tres paginas (contacto,home,Tacos) y una ruta dinamica ( tacos/:tipo ).
+En cada ruta se imprime un componente que debe ser importado.
 
 ```javascript
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import AppRouter from "./routers/AppRouter";
-import './index.css';
+import { Routes, Route } from 'react-router-dom';
+import Home from '../pages/Home';
+import Contacto from '../pages/Contacto';
+import Tacos from '../pages/Tacos';
+import TiposTacos from '../components/TiposTacos';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <AppRouter />
-  </React.StrictMode>
-);
+export default function RouterApp() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/contacto" element={<Contacto />} />
+      <Route path="/tacos" element={<Tacos />} />
+      <Route path="/tacos/:tipo" element={<TiposTacos />} />
+      <Route path="*" element={<Error404 />} />
+    </Routes>
+  );
+}
+```
+
+Actualmente no hace falta enviar el parametro exact al componente Route ya que por defecto hace una busqueda especifica de la ruta por lo que tampoco importa el orden ( de mas especifico a menos especifico ) en el path de las rutas.
+
+# Link (React Router)
+
+Ejemplo de un Link que nos lleva a la pagino home.
+
+```javascript
+<Link to="/">Home</Link>
+```
+
+Obviamente debe existir la ruta pertinente.
+
+```javascript
+ <Route path="/" element={<Home />} />
+```
+
+# Rutas Dinamicas
+
+Ruta
+
+```javascript
+ <Route path="/tacos/:tipo" element={<TiposTacos />} />
+```
+
+implemetacion de la ruta en el componente Tacos con Link para armar unas opciones de busqueda.
+
+```javascript
+ import React from 'react';
+import { Link } from 'react-router-dom';
+
+export default function Tacos() {
+  const tacos = ['CARNE', 'POLLO', 'ESPECIAL', 'DOBLE QUESO'];
+
+  return (
+    <div>
+      <h1>Tacos</h1>
+      <div className="ListaTacos">
+        {tacos.map((taco) => (
+          <Link key={taco} to={`/tacos/${taco}`}>
+            {taco}
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
+```
+
+## useParams (Hooks para extraer datos de la url);
+
+Ej extraemos de la ruta dinamica
+
+```javascript
+ <Route path="/tacos/:tipo" element={<TiposTacos />} />
+```
+
+el elemento tipo de la url en el componente TipoTacos.
+
+```javascript
+import React from 'react';
+import { useParams } from 'react-router-dom';
+
+export default function TiposTacos() {
+  const { tipo } = useParams();
+  return (
+    <div>
+      <h1>{tipo}</h1>
+    </div>
+  );
+}
 ```
