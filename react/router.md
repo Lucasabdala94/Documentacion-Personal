@@ -214,5 +214,8 @@ export default function TacoDetalles() {
 Carga la ruta anidada en el mismo path que la ruta padre.
 
 ```javascript
-  
+<Route path="/tacos" element={<Tacos />}>
+  <Route index element={<ComponenteIndex />} />
+  <Route path="details" element={<TacoDetalles />} />
+</Route>
 ```
