@@ -288,7 +288,7 @@ export default function NavLinkPersonalizado({
 }
 ```
 
-Implementacion donde pasamos el path y por clase el nombre de la clase que se aplicara cuando este activo...
+Implementacion el NavLink personalizado pasandole el path y por clase el nombre de la clase que se aplicara cuando este activo...
 
 ```javascript
 <li>
@@ -302,3 +302,5 @@ Implementacion donde pasamos el path y por clase el nombre de la clase que se ap
   </NavLinkPersonalizado>
 </li>
 ```
+
+Ahora solo debemos dar estilos a la clase .nombreclase, este valor es modificable desde el props del NavLinkPersonalizado.
