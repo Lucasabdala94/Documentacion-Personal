@@ -208,3 +208,11 @@ export default function TacoDetalles() {
   );
 }
 ```
+
+# index router (React Router)
+
+Carga la ruta anidada en el mismo path que la ruta padre.
+
+```javascript
+  
+```
