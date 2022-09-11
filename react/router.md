@@ -263,7 +263,7 @@ export default function App() {
 
 Luego en style.css le damos estilos a .nombreClaseActiva para que se meustre como deseamos.
 
-Para evitar agregar funciones en cada NavLink podemos crear un componente personalizado que retorne el Navlink con el classname con el nombre que nosotros le pasemos como parametro...
+Para evitar agregar funciones en cada NavLink podemos crear un componente personalizado que retorne el Navlink con el classname con el valor que le asignamos al props clase.
 Ej del componente que llamaremos NavLinkPersonalizado:
 
 ```javascript
