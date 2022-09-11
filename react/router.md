@@ -219,3 +219,86 @@ Carga la ruta anidada en el mismo path que la ruta padre.
   <Route path="details" element={<TacoDetalles />} />
 </Route>
 ```
+
+# NavLink (React Router)
+
+Funciona igual que el link pero agrega una clase al Link que se encuentra activo.
+
+Debemos importar el NavLink
+
+```javascript
+import { NavLink } from 'react-router-dom';
+
+export default function App() {
+  let activeClassName = 'nombreClaseActiva';
+  return (
+      <header>
+        <h1>Titulo Header APP</h1>
+        <nav className="navbar">
+          <ul>
+            <li>
+              <NavLink
+                to="/contacto"
+                className={({ isActive }) =>
+                  isActive ? activeClassName : undefined
+                }
+              >
+                Contacto
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? activeClassName : undefined
+                }
+                to="/"
+              >
+                Home
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+      </header>
+```
+
+Luego en style.css le damos estilos a .nombreClaseActiva para que se meustre como deseamos.
+
+Para evitar agregar funciones en cada NavLink podemos crear un componente personalizado que retorne el Navlink con el classname con el nombre que nosotros le pasemos como parametro...
+Ej del componente que llamaremos NavLinkPersonalizado:
+
+```javascript
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+
+export default function NavLinkPersonalizado({
+  to,
+  clase,
+  children,
+  ...props
+}) {
+  return (
+    <NavLink
+      {...props}
+      className={({ isActive }) => (isActive ? clase : undefined)}
+      to={to}
+    >
+      {children}
+    </NavLink>
+  );
+}
+```
+
+Implementacion donde pasamos el path y por clase el nombre de la clase que se aplicara cuando este activo...
+
+```javascript
+<li>
+  <NavLinkPersonalizado to="/" clase="nombreclase">
+    Home
+  </NavLinkPersonalizado>
+</li>
+<li>
+  <NavLinkPersonalizado to="/contacto" clase="nombreclase">
+    Contacto
+  </NavLinkPersonalizado>
+</li>
+```
