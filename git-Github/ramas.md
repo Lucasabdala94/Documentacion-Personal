@@ -11,7 +11,7 @@ git branch -a
 ```console
 git branch
 ```
-Para tener las ramas del repo de GitHu en local hay que hacer git fetch primero y luego movernos a esa rama con git checkout NOMBRE DE RAMA EN REPO.
+Para tener las ramas del repo de GitHub en local hay que hacer git fetch primero y luego movernos a esa rama con git checkout NOMBRE DE RAMA EN REPO.
 
 a modo de ej. si en el repositorio tenemos la rama helado... Al poner git branch no aparecera en la lista de ramas ya que no se encuentra entre las ramas locales...
 con git fetch nos descargamos todas las ramas del repositorio de GitHub. Si hacemos git brach seguira sin aparecer...
@@ -30,7 +30,7 @@ Permaneceremos en la rama que estabamos antes de crearla.
 git checkout -b NOMBREDERAMA 
 ```
 
-## Moernos a una rama local o remota.
+## Movernos a una rama local o remota.
 
 ```console
 git checkout NOMBRE DE RAMA
