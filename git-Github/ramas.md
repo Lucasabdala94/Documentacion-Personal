@@ -56,7 +56,7 @@ para poder eliminar no nos tenemos que encontrar en esa rama
 ## Borrar rama del repositorio local y Github.
 
 ```console
-git push origin --delete practica-React-Router
+git push origin --delete NOMBRE RAMA 
 ```
 
 
