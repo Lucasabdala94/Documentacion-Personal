@@ -41,7 +41,9 @@ git checkout NOMBRE DE RAMA
 ```console
 git branch -d NOMBRE DE RAMA
 ```
-si no funciona....
+
+si no funciona....Hay veces que no se borra porque no se hizo un merge.
+
 ```console
 git branch -D NOMBRE DE RAMA
 ```
@@ -51,8 +53,13 @@ Si la rama esta en el repo local y remoto de Github solo borrara la rama en loca
 
 para poder eliminar no nos tenemos que encontrar en esa rama
 
+## Borrar rama del repositorio local y Github.
 
-## Borrar rama definitivamente.
+```console
+git push origin --delete practica-React-Router
+```
+
+
 
 
 
