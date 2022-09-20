@@ -6,6 +6,13 @@
 git branch -a
 ```
 
+## Descargar ramas de GitHub al repositorio local.
+
+```console
+git fetch
+```
+Las ramas descargadas no apareceran en el repo local hasta movernos a ellas con git checkout...
+
 ## Listar ramas en local .  
 
 ```console
@@ -29,6 +36,12 @@ Permaneceremos en la rama que estabamos antes de crearla.
 ```console
 git checkout -b NOMBREDERAMA 
 ```
+## Subir rama local a repositorio github.
+
+```console
+git push -u origin NombreRamaLocal
+```
+siendo origin el nombre asignado al vincular con repo github.
 
 ## Movernos a una rama local o remota.
 
@@ -61,8 +74,18 @@ git push origin --delete NOMBRE RAMA
 
 origin corresponde al nombre que le dimos al repositorio de github.
 
+## Mostrar ramas y commits.
+
+```console
+git show-branch
+```
 
 
+## Mostrar commits especificos de una rama.
+
+```console
+git show-branch NombreRama
+```
 
 
 
