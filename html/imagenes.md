@@ -61,7 +61,7 @@ lista de una o más cadenas separadas por comas indicando las posibles fuentes p
 
 **srcset** define el conjunto de imágenes que el navegador podrá elegir, y el tamaño de cada imagen. 
 
-Ejemplo dondse se selecciona la imagen segun su DPI.
+Ejemplo donde se selecciona la imagen segun su DPI.
 
 ```html
 <img
@@ -70,9 +70,9 @@ Ejemplo dondse se selecciona la imagen segun su DPI.
   alt='texto alternativo' />
 
 ```
-Se indican las rutas a tres imágenes. A continuación cada ruta (separado por un espacio en blanco y antes de la coma que las separa) se indica un valor Nx que es la referencia para que el navegador seleccione la que mejor se ajuste a la densidad de píxeles (DPI) del dispositivo que la mostrará.
+Se indican las rutas a tres imágenes. A continuación de cada ruta (separado por un espacio en blanco y antes de la coma que las separa) se indica un valor Nx que es la referencia para que el navegador seleccione la que mejor se ajuste a la densidad de píxeles (DPI) del dispositivo que la mostrará.
 Si no hay descriptores especificados,(primera imagen) la fuente es asignada por defecto a 1x.
-En este caso, los distintos archivos de imagen pueden ofrecer o no la misma visión. Lo que sí es que cada archivo está guardado en una resolución diferente.
+En este caso, los distintos archivos de imagen pueden ofrecer o no la misma visión. Cada archivo está guardado en una resolución diferente.
 
 Ejemplo dondse se selecciona la imagen segun su tamaño.
 
@@ -120,7 +120,7 @@ Para seleccionar la imagen óptima, el user agent (en-US) examina cada atributo 
 
 ## Etiqueta < source >
 
-El elemento source contiene los grupos de imágenes entre los que se elegirá la que mostrar. Un mismo picture puede contener tantos elementos source como se necesiten.
+El elemento source contiene los grupos de imágenes entre los que se elegirá la que mostrará. Un mismo picture puede contener tantos elementos source como se necesiten.
 
 ### Seleccion de imagen por tamaño de ventana
     
