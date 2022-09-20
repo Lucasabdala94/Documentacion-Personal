@@ -59,7 +59,7 @@ para poder eliminar no nos tenemos que encontrar en esa rama
 git push origin --delete NOMBRE RAMA 
 ```
 
-
+origin corresponde al nombre que le dimos al repositorio de github.
 
 
 
