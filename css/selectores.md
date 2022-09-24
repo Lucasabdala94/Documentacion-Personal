@@ -73,7 +73,7 @@ si la palabra se encuentra al final
 }
 ```
 
-si necesitamos que este valor que coincida no este necesariamente al comienzo
+si necesitamos que este valor que coincida no este necesariamente al comienzo y tampoco al final.
 
 ```CSS
 
