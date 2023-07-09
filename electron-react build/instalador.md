@@ -42,7 +42,7 @@ https://www.electronforge.io/guides/framework-integration/react#create-the-app-a
 - Creamos archivo app.js en src
 
 ```Bash
-  import * as React from 'react';
+import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 function render() {
@@ -58,3 +58,8 @@ render();
   npm install --save react react-dom
 ```
 
+## Pagina de aplicacion 
+
+```Bash
+  https://www.electronforge.io/
+```
